@@ -105,8 +105,7 @@ if "%ANT_ERROR%"=="0" goto mainEnd
 echo *******************************
 echo [ERROR] Ant target failed
 echo *******************************
-pause
-EXIT 1
+goto :EOF
 
 :mainEnd
 echo *******************************

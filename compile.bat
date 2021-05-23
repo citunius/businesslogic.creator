@@ -35,16 +35,13 @@ where java >nul 2>nul
 IF %errorlevel%==1 (
     echo [ERROR] Java not found
 	echo [ERROR] Business Logic requires at least JDK 1.8.
-	pause
 	goto :EOF
-    exit /b 1
 )
 rem Check JAVA_HOME variable
 if "%JAVA_HOME%" == "" (
     SET "%1=NO_OK"
 	echo  [ERROR] JAVA_HOME variable is not set, unable to use it
 	goto :EOF
-	rem exit /b 1
 )
 
 rem Install Apache Ant
@@ -116,4 +113,3 @@ rem ----------------------------------------------------------------------------
 rem ----- END: Script body
 rem -----------------------------------------------------------------------------------------------
 
-rem EXIT
